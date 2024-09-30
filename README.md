@@ -17,9 +17,13 @@ With more than 23,000 unique cards, the game is a phenomenon, having worldwide r
 
 The game also has a thriving primary and secondary market for cards. The rarest card in the game, the Black Lotus, has been sold for $ 600,000 on an auction, with some cards receiving even higher expected value.
 
-We believe that there's a lot to learn from analyzing the card assets in relations to their general prices in the secondary market, and understand better how we can create models that allows us to predict price fluctuations an possibily understand how deck composition affects pricing. Because the market is super madure, it is also easier to collect the informatio necessary to run the experiments.
+We believe that there's a lot to learn from analyzing the card assets in relation to their general prices in the secondary market, and understand better how we can create models that allow us to predict price fluctuations and possibly understand how deck composition affects pricing. Our objective for this project will be to statistically analyze the price variable against other feature variables, so if time allows we can predict new card prices. 
 
-We also believe that the problem space is useful to be applied in the future to different market assets that are comercialized on secondary markets
+Since the market for Magic cards is mature, we were able to find an open source dataset that includes current (or relatively current, depending on the last update made to the database) market prices. We will use that full dataset as ground truth instead of pulling our own data from various marketplaces. 
+
+We plan to implement a Self-Organizing Map (SOM) to assist with clustering and visualization of our data and compare our own statistical methods with the inferences we gather from the SOM. This project can be applied to different fields for the validation of SOMs and their usefulness, as well as applying it to the Magic: The Gathering community of secondary markets.
+
+
 
 ## Possible hypothesis
 We are still analyzing the best hypothesis that would be feasible to our project, given time constraints 
@@ -43,6 +47,28 @@ https://docs.google.com/presentation/d/1JGvcu4lP4qdWhSUnkANtwXZufy2jb_T6_U-tCEs0
 Dataset: 
 - Official dataset: https://mtgjson.com/getting-started/
 - Data file (110Mb): https://mtgjson.com/api/v5/AllPrintingsCSVFiles.zip
+
+All card dataset that includes all printings and variations of the Card Data Model, organized by Set’s code property. 
+
+Cards information: 
+
+- 97,145 card entries (25 variables in total)
+- 5 main variables selected to analysis
+    - rarity
+    - edhrecRank
+    - artist
+    - power
+    - color
+
+Price information:
+
+- 558,079 card price entries (8 variables in total)
+- 3 main variables selected
+    - price
+    - gameAvailability
+    - currency
+
+
 
 ## Reference Project Timeline
 
