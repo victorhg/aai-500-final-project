@@ -13,15 +13,26 @@ Driver Folder with documents and colaboration files: https://drive.google.com/dr
 ## Introduction
 Magic the Gathering is one of the most famous card games in the world. First published in 1993 by Wizards of the Coast, it has become a benchmark of the modern fantasy games, getting more than 40 million players around the world (Schmidt., 2023).
 
-With more than 23,000 unique cards, the game is a phenomenon, having worldwide regional championships with cash prizes up to $ 10 million. For example, The Las Vegas Grand Prix championship receives close to 11,000 participants every edition.
+With more than 23,000 unique cards, the game is a phenomenon, having worldwide championships with cash prizes up to $ 10 million. For example, The Las Vegas Grand Prix championship receives close to 11,000 participants every edition (Grand Prix, 2024).
 
-The game also has a thriving primary and secondary market for cards. The rarest card in the game, the Black Lotus, has been sold for $ 600,000 on an auction, with some cards receiving even higher expected value.
+The game also has a thriving primary and secondary market for cards. The rarest card in the game, the Black Lotus, has been sold for $ 600,000 on an auction, with some cards receiving even higher expected value. 
 
-We believe that there's a lot to learn from analyzing the card assets in relation to their general prices in the secondary market, and understand better how we can create models that allow us to predict price fluctuations and possibly understand how deck composition affects pricing. Our objective for this project will be to statistically analyze the price variable against other feature variables, so if time allows we can predict new card prices. 
+We believe that analyzing card assets in relation to their general prices in the secondary market can offer valuable insights to collectors. The primary object of this project is to statistically analyze the price variable against various feature variables using methods learned in this course, and employ regression processes to predict prices. 
 
-Since the market for Magic cards is mature, we were able to find an open source dataset that includes current (or relatively current, depending on the last update made to the database) market prices. We will use that full dataset as ground truth instead of pulling our own data from various marketplaces. 
+We decided to apply multiple regression and classification techniques to allow us to predict prices based on the categorical data from Cards, using Linear Regression techniques and Ordinary Least Square Regressions. We will then employ a Self-Organizing Map (SOM) to assist with clustering and visualization. Ultimately, using Random Forest Regression, we aim to compare some of the results obtained from the SOM with our own manual statistical evaluations and lay the groundwork for building trust in machine learning models for multidimensional datasets. Numerous fields can benefit from the application of simple machine learning algorithms such as SOMs.  
 
-We plan to implement a Self-Organizing Map (SOM) to assist with clustering and visualization of our data and compare our own statistical methods with the inferences we gather from the SOM. This project can be applied to different fields for the validation of SOMs and their usefulness, as well as applying it to the Magic: The Gathering community of secondary markets.
+Given the maturity of the Magic: The Gathering card market, we have identified an open-source dataset that includes current (or relatively recent) market prices. This comprehensive dataset will be our ground truth, rather than aggregating data from multiple marketplaces. Subsequently, if time permits we would like to implement a predictive model for card price predictions using Card Attributes and Price Information from a single market day.
+
+Secondary markets are influenced by many factors when pricing a card, many of which are external to the data used in the article, and that could be used in future research. Synergy between cards during gameplay, deck strategy in Tournaments, exclusive art and celebrity endorsement can affect price and will not be used in the analysis. 
+
+## Some Results
+
+| Process                              | Result                              | Observation                                                               |
+| ------------------------------------ | ----------------------------------- | ------------------------------------------------------------------------- |
+| Polynomial Linear Regression | MSE: 2.367<br>R-squared: 0.32       |                                                                           |
+| Ordinary Least Squares          | MSE: 2.618 <br>R-squared: 0.529<br> | EDH Saltiness and Game Availability with more influence in the result |
+| Random Forest Regression         | MSE: 1.34<br>R-squared: 0.59        | EDH Rank and EDH Saltiness with more influence in the result              |
+
 
 
 
