@@ -25,6 +25,13 @@ Given the maturity of the Magic: The Gathering card market, we have identified a
 
 Secondary markets are influenced by many factors when pricing a card, many of which are external to the data used in the article, and that could be used in future research. Synergy between cards during gameplay, deck strategy in Tournaments, exclusive art and celebrity endorsement can affect price and will not be used in the analysis. 
 
+## Quick Start
+If you are looking to evaluate our statistical process this is the general order to follow: 
+1. ensure that you have the cards.csv and cardPrices.csv - you can pull a new date for the Prices
+2. run the `notebooks/preprocessing.ipynb` file
+3. evaluate the primary and secondar data: `notebooks/eda_primary.ipynb` and `notebooks/eda_secondary.ipynb`
+4. Explore our modeling
+
 ## Some Results
 
 | Process                              | Result                              | Observation                                                               |
