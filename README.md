@@ -5,7 +5,6 @@ Group members
 - Victoria Dorn
 - Victor Hugo Germano
 
-
 Driver Folder with documents and colaboration files: https://drive.google.com/drive/folders/1YWShaGxksdq90fVHfnRuzuHFqex22Y60
 
 # General Porpose of this project
@@ -26,34 +25,26 @@ Given the maturity of the Magic: The Gathering card market, we have identified a
 Secondary markets are influenced by many factors when pricing a card, many of which are external to the data used in the article, and that could be used in future research. Synergy between cards during gameplay, deck strategy in Tournaments, exclusive art and celebrity endorsement can affect price and will not be used in the analysis. 
 
 ## Quick Start
-If you are looking to evaluate our statistical process this is the general order to follow: 
+ 
+The following is the high level workflow. 
+
 1. ensure that you have the cards.csv and cardPrices.csv - you can pull a new date for the Prices
 2. run the `notebooks/preprocessing.ipynb` file
-3. evaluate the primary and secondar data: `notebooks/eda_primary.ipynb` and `notebooks/eda_secondary.ipynb`
-4. Explore our modeling
+3. evaluate the primary and secondary dataset: `notebooks/eda_primary.ipynb` and `notebooks/eda_secondary.ipynb`
+4. use clusering for futher analysis on both datasets: `notebook/clustering_primary.ipynb` and `notebook/clustering_secondary.ipynb`
+4. explore OLS and RF on both primary and secondary dataset: `notebooks/OLS_RF_primary.ipynb` and `notebooks/OLS_RF_secondary.ipynb`
 
-## Some Results
-
-| Process                              | Result                              | Observation                                                               |
-| ------------------------------------ | ----------------------------------- | ------------------------------------------------------------------------- |
-| Polynomial Linear Regression | MSE: 2.367<br>R-squared: 0.32       |                                                                           |
-| Ordinary Least Squares          | MSE: 2.618 <br>R-squared: 0.529<br> | EDH Saltiness and Game Availability with more influence in the result |
-| Random Forest Regression         | MSE: 1.34<br>R-squared: 0.59        | EDH Rank and EDH Saltiness with more influence in the result              |
+For more details about the process and results consult the technical report.
 
 
+## Hypothesis
 
-
-## Possible hypothesis
-We are still analyzing the best hypothesis that would be feasible to our project, given time constraints 
-
-- Card price prediction based on features and rarity
-- Win rate estimations based on deck composition
-- Card synergy compositions 
-- Pay to win? influence of price on deck composition and win rate (possible hypothesis: win rate increases as you spend more money? Expensive decks win more?)
+- Can we determine driving features in the price of Magic: The Gathering cards, and subsequently predict card prices?
 
 ## Project Organization
 
-- dataset: Contains all csv files used in this project
+- dataset: Contains initial datasets, transformed datasets, and mapped datasets 
+- dataset/graphs: Important graphs, saved out for reference
 - notebooks: Contains all Jupyter notebooks
 
 # General Assets
