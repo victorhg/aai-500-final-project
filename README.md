@@ -1,5 +1,8 @@
 aai-500-final-project
 # USD AAI 500 final project - Group 3
+Shiley-Marcos School of Engineering, University of San Diego
+AAI-500: Probability and Statistics
+
 
 Group members
 - Victoria Dorn
